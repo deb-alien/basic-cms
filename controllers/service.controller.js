@@ -24,7 +24,7 @@ export const createService = async (req, res) => {
 				.status(400)
 				.json({ message: "All fields are required" });
 		}
-		if (rq.file) {
+		if (req.file) {
 			return res.status(400).json({ message: "Image is required" });
 		}
 
